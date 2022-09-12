@@ -14,6 +14,29 @@
         color: #1a64d6;
         margin: 0px auto;
         text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h2 {
+        color: #000000;
+        margin: 6px auto;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+      }
+
+      h3 {
+        text-align: center;
+        margin: 55px auto;
+      }
+
+      .bold-h2-deg {
+        font-weight: bold;
+      }
+
+      .degree-light {
+        font-weight: lighter;
+        padding: 50px auto;
       }
     </style>
   </head>
@@ -21,21 +44,22 @@
     <div>
       <h1>🌤</h1>
       <h1>Currently 21&deg; in Tokyo</h1>
-      <h2>13&deg; / 23&deg;</h2>
+      <h2>13&deg; / <span class="bold-h2-deg">23&deg;</span></h2>
     </div>
     <div>
-      🌧 Tomorrow <br />
-      10&deg; / 22&deg;
+      <h3 class="tomorrow">
+        🌧 Tomorrow <br />
+        <span class="degree-light">10&deg; / 22&deg;</span>
+      </h3>
+      <h3 class="saturday">
+        🌥 Saturday <br />
+        <span class="degree-light">15&deg; / 17&deg;</span>
+      </h3>
+      <h3 class="sunday">
+        ☀️ Sunday <br />
+        <span class="degree-light">25&deg; / 28&deg;</span>
+      </h3>
     </div>
-    <div>
-      🌥 Saturday <br />
-      15&deg; / 17&deg;
-    </div>
-    <div>
-      ☀️ Sunday <br />
-      25&deg; / 28&deg;
-    </div>
-
     <button>Change City</button>
 
     <div>Coded by Linssi Colin Ruiz</div>
