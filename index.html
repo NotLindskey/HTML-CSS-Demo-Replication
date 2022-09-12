@@ -19,7 +19,7 @@
 
       h2 {
         color: #000000;
-        margin: 6px auto;
+        margin: 10px auto;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: lighter;
@@ -27,16 +27,41 @@
 
       h3 {
         text-align: center;
-        margin: 55px auto;
+        display: block;
+        margin: 45px 5px 15px 5px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h4 {
+        text-align: center;
+        display: block;
+        margin: 15px 5px 15px 5px;
+        font-weight: lighter;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      button {
+        background-color: blue;
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        color: white;
+        transition: ease-in-out;
+        border-radius: 30px;
+      }
+
+      button:hover {
+        color: blue;
+        background-color: white;
+      }
+
+      .footer {
+        text-align: center;
+        margin: 15px auto;
       }
 
       .bold-h2-deg {
         font-weight: bold;
-      }
-
-      .degree-light {
-        font-weight: lighter;
-        padding: 50px auto;
       }
     </style>
   </head>
@@ -47,22 +72,16 @@
       <h2>13&deg; / <span class="bold-h2-deg">23&deg;</span></h2>
     </div>
     <div>
-      <h3 class="tomorrow">
-        🌧 Tomorrow <br />
-        <span class="degree-light">10&deg; / 22&deg;</span>
-      </h3>
-      <h3 class="saturday">
-        🌥 Saturday <br />
-        <span class="degree-light">15&deg; / 17&deg;</span>
-      </h3>
-      <h3 class="sunday">
-        ☀️ Sunday <br />
-        <span class="degree-light">25&deg; / 28&deg;</span>
-      </h3>
+      <h3>🌧 Tomorrow</h3>
+      <h4>10&deg; / <span class="bold-h2-deg">22&deg;</span></h4>
+      <h3>🌥 Saturday</h3>
+      <h4>15&deg; / <span class="bold-h2-deg">17&deg;</span></h4>
+      <h3>☀️ Sunday</h3>
+      <h4>25&deg; / <span class="bold-h2-deg">28&deg;</span></h4>
     </div>
     <button>Change City</button>
 
-    <div>Coded by Linssi Colin Ruiz</div>
+    <div class="footer">Coded by Linssi Colin Ruiz</div>
   </body>
 </html>
 
