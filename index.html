@@ -13,6 +13,11 @@
         font-family: Helvetica, Arial, sans-serif;
       }
 
+      #emoji {
+        display: block, 200px;
+        text-align: center;
+      }
+
       h1 {
         color: #1a64d6;
         font-size: 34px;
@@ -76,11 +81,8 @@
     </style>
   </head>
   <body>
-    <h1>
-      🌤
-      <br />
-      Currently 21° in Tokyo
-    </h1>
+    <div id="emoji">🌤</div>
+    <h1>Currently 21° in Tokyo</h1>
     <h2>13° / <strong>23°</strong></h2>
     <ul>
       <li>
@@ -100,13 +102,32 @@
     <button>Change city</button>
     <p>Coded by Linssi Colin Ruiz</p>
     <script>
-      function updateHeading(NewHeading) {
-        let heading = document.querySelector("h1");
-        heading.innerHTML = NewHeading;
+      function updateHeader1(NewHeader1) {
+        let header1 = document.querySelector("h1");
+
+        header1.innerHTML = NewHeader1;
+      }
+
+      function updateEmoji(NewDiv1) {
+        let div = document.querySelector("div");
+
+        div.innerHTML = NewDiv1;
       }
 
       function updateCity() {
         let city = prompt("What city do you live in?");
+        city = city.trim();
+
+        let div = document.querySelector("div");
+        let temperature = prompt("What is the temperature?");
+        if (temperature >= 0) {
+          div = "😄";
+        } else {
+          div = "☹️";
+        }
+
+        updateEmoji(`${div}`);
+        updateHeader1(`Currently ${temperature} in ${city}`);
       }
 
       let updateCityButton = document.querySelector("button");
